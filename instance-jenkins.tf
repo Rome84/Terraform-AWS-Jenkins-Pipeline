@@ -16,12 +16,7 @@ resource "aws_instance" "jenkins" {
 #  }
 
    provisioner "local-exec" {
-<<<<<<< HEAD
      command = "sleep 40 && echo \"[jenkins-server]\n${aws_instance.jenkins.public_ip} ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=mykey host_key_checking=False\" > jenkins-inventory &&  ansible-playbook -i jenkins-inventory ansible-playbooks/jenkins-create.yml "
-
-=======
-     command = "sleep 30 && echo \"[jenkins-server]\n${aws_instance.jenkins.public_ip} ansible_connection=ssh ansible_ssh_user=ec2-user ansible_ssh_private_key_file=mykey host_key_checking=False\" > jenkins-inventory &&  ansible-playbook -i jenkins-inventory ansible-playbooks/jenkins-create.yml "
->>>>>>> b7a34d87a66468d1c2441c3efb38c6593975a516
   }
 
   connection {
