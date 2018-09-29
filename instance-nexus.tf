@@ -34,7 +34,3 @@ output "nexus_ip" {
 output "nexus_END_URL" {
     value = "http://${aws_instance.nexus.public_ip}:8081"
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> b7a34d87a66468d1c2441c3efb38c6593975a516
